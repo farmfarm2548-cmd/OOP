@@ -36,10 +36,10 @@ public class CryptoPayment extends BasePayment implements iPayment {
     @Override
     public void printReceipt() {
         System.out.println("--------- Receipt of Crypto --------");
-        System.out.println(String.format("%-12s%18s", "Transfer:", String.format("%,.1f", amount) + " USDT"));
-        System.out.println(String.format("%-12s%18s", "Gas Fee (" + getFeePercentage() + "%):",
+        System.out.println(String.format("%-16s%20s", "Transfer:", String.format("%,.1f", amount) + " USDT"));
+        System.out.println(String.format("%-16s%20s", "Gas Fee (" + getFeePercentage() + "%):",
                 String.format("%,.1f", getFee(amount)) + " USDT"));
-        System.out.println(String.format("%-12s%18s", "Total:", String.format("%,.1f", calculateTotal(amount)) + " USDT"));
+        System.out.println(String.format("%-16s%20s", "Total:", String.format("%,.1f", calculateTotal(amount)) + " USDT"));
         System.out.println("------------------------------------");
     }
 }

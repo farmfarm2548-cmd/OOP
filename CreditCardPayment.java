@@ -36,10 +36,10 @@ public class CreditCardPayment extends BasePayment implements iPayment {
     @Override
     public void printReceipt() {
         System.out.println("----- Receipt of CreditCard ----");
-        System.out.println(String.format("%-12s%18s", "Amount:", String.format("%,.1f", amount) + "$"));
-        System.out.println(String.format("%-12s%18s", "Fee (" + getFeePercentage() + "%):",
+        System.out.println(String.format("%-12s%20s", "Amount:", String.format("%,.1f", amount) + "$"));
+        System.out.println(String.format("%-12s%20s", "Fee (" + getFeePercentage() + "%):",
                 String.format("%,.1f", getFee(amount)) + "$"));
-        System.out.println(String.format("%-12s%18s", "Total:", String.format("%,.1f", calculateTotal(amount)) + "$"));
+        System.out.println(String.format("%-12s%20s", "Total:", String.format("%,.1f", calculateTotal(amount)) + "$"));
         System.out.println("--------------------------------");
     }
 }
